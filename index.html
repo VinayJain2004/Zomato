@@ -12,6 +12,44 @@
     <!-- Header -->
 
     <header>
+
+      <!-- Navbar and Hamburger-->
+
+      <div class="container"> 
+         <nav class="navbar links">
+
+            <div class="logo"><img src="./img/sweetsvilla without bg.png" alt=""></div>
+
+            <ul class="nav-menu">
+              <a href="#">Investor  Relations</a>
+              <a href="#">Add Restaurents</a>
+              <a href="#">Log in</a>
+              <a href="#">Sign up</a>
+            </ul>
+            <div class="hamburger">
+               <span class="bar"></span>
+               <span class="bar"></span>
+               <span class="bar"></span>
+            </div>
+         </nav>
+      </div> 
+    
+<script>
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+hamburger.classList.toggle("active");
+navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+hamburger.classList.remove("active");
+navMenu.classList.remove("active");
+}))
+  </script>
+
       <!-- Navbar -->
 
       <nav>
@@ -36,6 +74,7 @@
           <button type="submit">Search</button>
         </div>
       </section>
+
     </header>
 
     <!-- Main Content -->
@@ -191,7 +230,7 @@
         <div class="app-img"><img src="./img/asset 13.avif" alt="loading..."></div>
         <div class="app-text">
           <h1>Get the Zomato app</h1>
-          <p>We will send you a link, open it on your phone to download <br> the app</p>
+          <p>We will send you a link, open it on your phone to download the app</p>
          <div class="radio">
           <div><input type="radio" name="fill" id="email" checked>
             <label for="email">Email</label></div>
@@ -286,7 +325,7 @@
             <li>Sitemap</li>
           </ul>
         </div>
-        <div class="footer-link">
+        <div class="footer-link" id="none">
           <h3>SOCIAL LINKS</h3>
           <div class="social">
             <img src="./img/asset 30.svg" alt="loading...">
